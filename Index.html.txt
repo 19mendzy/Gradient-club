@@ -1,0 +1,76 @@
+/* Styles généraux */
+body {
+  font-family: 'Frontspring', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2 {
+  font-family: 'Petite France', sans-serif;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+/* Arrière-plan animé */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: linear-gradient(45deg, #9D72A7, #FFE301, #E58128, #F96821);
+  background-size: 300% 300%;
+  animation: fullGradient 12s infinite;
+}
+
+@keyframes fullGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+button {
+  background-color: #F96821;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 3;
+  position: relative;
+}
+
+button:hover {
+  background-color: #903D40;
+}
